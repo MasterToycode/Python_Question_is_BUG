@@ -1,3 +1,6 @@
+在 Python 中，函数参数的传递方式是按值传递，但对于可变类型的参数（例如列表、字典等），函数内部的修改会影响到原始对象。
+
+
 def modify_list(my_list):
     my_list.append(4)
     return
