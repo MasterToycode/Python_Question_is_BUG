@@ -17,3 +17,23 @@ def assign_list(my_list):
 my_list = [4, 5, 6]
 assign_list(my_list)
 print(my_list)  # 输出结果为 [4, 5, 6]
+
+#while-else 结构
+password_list=['12345','KOBE248']
+def account_login():
+    tries=3
+    while tries > 0:
+        password=input("Your password: ")
+        if password==password_list[-1]:
+            print("Login successfully")
+            break
+        elif password==password_list[0]:
+             password_list.append(input("Please enter a new passord: "))
+             print("Your passord has changed successfully!")
+        else:
+            print("Wrong password or invalid input!")
+            tries=tries-1
+            print(tries,'times left')
+    else:
+        print("Your account has been suspended")
+account_login()
