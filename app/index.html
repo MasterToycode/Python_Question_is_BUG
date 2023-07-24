@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Game</title>
+</head>
+<body>
+    <h1>Dice Game</h1>
+    <p>Your current money: {{ money }}$</p>
+    <form method="post">
+        <label for="bet">How much do you want to bet?</label>
+        <input type="number" name="bet" required>
+        <br>
+        <label for="answer">Big or Small:</label>
+        <select name="answer" required>
+            <option value="Big">Big</option>
+            <option value="Small">Small</option>
+        </select>
+        <br>
+        <input type="submit" value="Play">
+    </form>
+    <p>{{ result }}</p>
+</body>
+</html>
