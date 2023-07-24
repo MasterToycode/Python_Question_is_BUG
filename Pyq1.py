@@ -37,3 +37,23 @@ def account_login():
     else:
         print("Your account has been suspended")
 account_login()
+
+
+
+import time
+c=[]
+t0=time.perf_counter()
+for i in range(1,200001):
+    c.append(i)
+print(time.perf_counter()-t0,"seconds process time")
+
+t0=time.perf_counter()
+d=[i for i in range(1,200001)]
+print(time.perf_counter()-t0,"seconds process time")
+#Python3.8以上的版本已经弃用了time.clock()函数
+
+
+
+
+
+
