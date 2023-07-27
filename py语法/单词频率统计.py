@@ -14,7 +14,6 @@ def Word_fun(path):
             # 创建一个字典，以每个单词为键，记录该单词在文本中出现的次数为值
             counts_dict = {index: words.count(index) for index in words_index}
 
-            # 将counts_dict声明为全局变量（但实际上此处声明为全局变量是多余的，因为它已经在函数内部定义了）
             global counts_dict
     except Exception as mistake:
         # 如果发生异常（如文件找不到），输出错误信息
