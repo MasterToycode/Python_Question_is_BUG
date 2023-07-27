@@ -1,0 +1,15 @@
+1、找自己的python安装目录，找到下面的site-packages
+2、记住你的文件名，因为它将作为引用是的名称，然后将你的py文件放进去
+3、如果你不清楚的安装路径，可以在编译器中输入一下代码
+import sys
+print(sys.path[3])
+
+
+一下是演示代码
+import 第一个自建的小库
+print(第一个自建的小库.name)
+print(第一个自建的小库.gender)
+print(第一个自建的小库.follower)
+
+
+
