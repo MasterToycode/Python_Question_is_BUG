@@ -25,7 +25,7 @@ def DAME():
 
         #游戏正式开始：
         print("<<<<< GAME STARTS! >>>>>")
-        print("Big or Samll: ")
+        print("Big or Small: ")
 
 
 
