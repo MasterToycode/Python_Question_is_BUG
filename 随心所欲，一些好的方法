@@ -1,1 +1,32 @@
-
+#include <iostream>
+#include <cmath> // 调用 sqrt 函数判断质数
+using namespace std;
+bool isPrime(int num) 
+{ // 判断是否为质数的函数
+    if (num <= 1) return false; // 小于等于 1 的数不是质数
+    if (num <= 3) return true; // 小于等于 3 的数都是质数
+    if (num % 2 == 0 || num % 3 == 0) return false; // 能被 2 或 3 整除的数不是质数
+    for (int i = 5; i * i <= num; i += 6) 
+    { // 判断从 5 开始，每次增加 6 的数是否为质数
+        if (num % i == 0 || num % (i + 2) == 0) return false; // 能被 i 或 i+2 整除的数不是质数
+    }
+    return true; // 其它情况下为质数
+}
+void printPrimes(int start, int end) 
+{ // 打印区间内的所有质数
+    for (int i = start; i <= end; i++) 
+    {
+        if (isPrime(i)) 
+        {
+            cout << i << " "; // 输出质数
+        }
+    }
+}
+int main() 
+{
+    int start = 2; // 区间左端点
+    int end = 100; // 区间右端点
+    cout << "素数列表：";
+    printPrimes(start, end); // 输出区间内的所有质数
+    return 0;
+}
